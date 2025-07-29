@@ -1,0 +1,301 @@
+/* Define the custom font 'Prisma' */
+@font-face {
+    font-family: "Prisma";
+    src: url("fonts/Prisma.ttf") format("truetype"); /* <<< PENTING: SESUAIKAN PATH INI */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define the custom font 'Microsoft Yi Baiti' */
+@font-face {
+    font-family: "Microsoft Yi Baiti";
+    src: url("fonts/Microsoft Yi Baiti.ttf") format("truetype"); /* <<< PENTING: SESUAIKAN PATH INI */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif; /* Fallback font for general text */
+}
+
+.container-custom {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.header-title {
+    font-family: "Prisma", sans-serif; /* Menggunakan font Prisma */
+    font-size: 3em;
+    font-weight: normal; /* Diubah ke normal agar sesuai dengan font Prisma */
+    letter-spacing: 5px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 0.8;
+}
+
+.header-subtitle {
+    font-family: "Microsoft Yi Baiti", sans-serif; /* Menggunakan font Microsoft Yi Baiti */
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.content-wrapper {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Lebar maksimal konten */
+    text-align: center;
+}
+
+.success-icon-container {
+    font-size: 3.5rem; /* Ukuran ikon */
+    color: #28a745; /* Warna hijau untuk ikon sukses */
+    margin-bottom: 1rem;
+}
+
+.success-text {
+    font-size: 2rem; /* Ukuran teks "REGISTRATION SUCCESS" */
+    font-weight: bold;
+    color: #28a745; /* Warna hijau */
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em; /* Sedikit spasi antar huruf */
+}
+
+.success-message {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 2.5rem; /* Jarak bawah pesan */
+    max-width: 450px; /* Batasi lebar teks agar tidak terlalu panjang */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-label-custom {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #333;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-select,
+.form-control {
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+/* Custom style for date input placeholder */
+.form-control[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+    color: #6c757d; /* Bootstrap placeholder color */
+}
+
+.form-control[type="date"]:valid::before,
+.form-control[type="date"]:focus::before {
+    content: "";
+    width: 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 30px;
+}
+
+/* **DEFINISI UNTUK .btn-back DAN .btn-next YANG SUDAH DIGABUNGKAN DAN DIKONSISTENKAN** */
+.btn-back,
+.btn-next {
+    /* Menggabungkan properti umum untuk kedua tombol */
+    border: none;
+    padding: 12px 30px; /* Padding horizontal dikurangi untuk kedua tombol */
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: all 0.3s ease; /* Menggunakan 'all' untuk transisi yang lebih umum */
+    flex: 1; /* Membuat tombol mengambil ruang yang sama dalam flex container */
+    max-width: 150px; /* Membatasi lebar maksimum tombol */
+    color: #ffffff; /* Warna teks putih untuk kedua tombol */
+}
+
+.btn-back {
+    background: linear-gradient(
+        to right,
+        #9c27b0,
+        #e040fb
+    ); /* Purple gradient */
+}
+
+.btn-back:hover {
+    opacity: 0.9;
+}
+
+.volen-artspace-title {
+    font-family: "Prisma", sans-serif; /* Menggunakan font Prisma */
+    font-size: 4rem; /* Adjust as needed */
+    font-weight: normal; /* Diubah ke normal agar sesuai dengan font Prisma */
+    letter-spacing: 0.2em; /* Adjust for desired spacing */
+    color: #333; /* Dark gray, adjust if needed */
+    line-height: 1; /* Adjust to control vertical spacing */
+}
+
+.registration-system-text {
+    font-family: "Microsoft Yi Baiti", sans-serif; /* Menggunakan font Microsoft Yi Baiti */
+    font-size: 1.5rem; /* Adjust as needed */
+    letter-spacing: 0.1em; /* Adjust for desired spacing */
+    color: #555; /* Gray, adjust if needed */
+    margin-top: -0.5rem; /* Pull closer to the title, sesuai layout asli */
+}
+
+.btn-next {
+    background-color: #343a40; /* Dark grey */
+    color: #ffffff; /* Dark grey */
+}
+
+.btn-next:hover {
+    background-color: #495057; /* Slightly lighter grey on hover */
+    color: #ffffff; /* Slightly lighter grey on hover */
+}
+
+.location-text {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* CSS untuk menyembunyikan elemen pada langkah awal */
+.hidden {
+    display: none !important;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 0.5rem; /* Slight rounded corners */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Menambahkan shadow seperti di screenshot */
+    /* Layout terkait card tetap sama seperti terakhir Anda berikan */
+}
+
+.bank-transfer-upload-area {
+    border: 2px dashed #ccc; /* Dashed border as seen in the image */
+    border-radius: 0.25rem;
+    padding: 3rem 1.5rem; /* Adjust padding as needed */
+    background-color: #fefefe; /* Slightly different background for the upload area */
+    cursor: pointer; /* Indicate it's clickable (for future upload functionality) */
+    color: #888;
+}
+
+.bank-transfer-upload-area .plus-icon-container {
+    color: #888; /* Color of the plus icon */
+}
+
+.bank-transfer-upload-area p {
+    font-size: 0.9rem;
+}
+
+.copy-account-btn {
+    background-color: #333; /* Dark button background */
+    border-color: #333; /* Dark button border */
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy-account-btn:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    border-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .volen-artspace-title {
+        font-size: 2.5rem;
+    }
+    .registration-system-text {
+        font-size: 1.2rem;
+    }
+    .bank-transfer-upload-area {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .volen-artspace-title {
+        font-size: 2rem;
+    }
+    .registration-system-text {
+        font-size: 1rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 3rem;
+    }
+    .header-subtitle {
+        font-size: 1.3rem;
+    }
+    .success-icon-container {
+        font-size: 3rem;
+    }
+    .success-text {
+        font-size: 1.8rem;
+    }
+    .success-message {
+        font-size: 1em;
+    }
+    .content-wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-title {
+        font-size: 2.5rem;
+        letter-spacing: 0.15em;
+    }
+    .header-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+        margin-bottom: 2rem;
+    }
+    .success-icon-container {
+        font-size: 2.5rem;
+    }
+    .success-text {
+        font-size: 1.5rem;
+    }
+    .success-message {
+        font-size: 0.9em;
+    }
+    .content-wrapper {
+        padding: 20px;
+    }
+    .btn-next {
+        padding: 10px 30px;
+        font-size: 1.1em;
+    }
+}
